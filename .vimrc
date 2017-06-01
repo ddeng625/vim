@@ -1,7 +1,7 @@
 " Basic Stuff
 set nocompatible
 set backspace=indent,eol,start
-" set mouse=a
+set mouse=a
 " set relativenumber
 set number
 set ls=2
