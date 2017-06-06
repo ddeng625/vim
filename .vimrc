@@ -4,12 +4,17 @@ set backspace=indent,eol,start
 set mouse=a
 set number
 set ls=2
-set ruler
+"set ruler
 syntax on
 set colorcolumn=80
 set hlsearch
 set splitright
 
+" Move to the next buffer
+nmap <leader>l :bnext<CR>
+
+" Move to the previous buffer
+nmap <leader>h :bprevious<CR>
 
 " Indentation
 filetype plugin indent on
@@ -41,8 +46,8 @@ nnoremap ]] ]]zz
 " Disable Arrow keys in Escape mode
 map <up> <C-y>
 map <down> <C-e>
-map <left> <nop>
-map <right> <nop>
+map <left> :bprevious<CR>
+map <right> :bnext<CR>
 
 " Disable Arrow keys in Insert mode
 imap <up> <Ctrl-y>
@@ -61,11 +66,18 @@ nmap <F5> :TagbarToggle<CR>
 call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'easymotion/vim-easymotion'
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ervandew/supertab'
+Plug 'vim-airline/vim-airline'
 call plug#end()
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+ let g:airline#extensions#tabline#fnamemod = ':t'
 
 
 " Nerd Commenter
@@ -80,9 +92,10 @@ let g:NERDTrimTrailingWhitespace = 1
 
 
 " Syntastic defaults
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"set statusline+=%m
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
