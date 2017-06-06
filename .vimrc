@@ -69,14 +69,15 @@ Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ervandew/supertab'
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
+Plug 'bling/vim-bufferline'
 call plug#end()
 
 " Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
- let g:airline#extensions#tabline#fnamemod = ':t'
+" let g:airline#extensions#tabline#fnamemod = ':t'
 
 
 " Nerd Commenter
