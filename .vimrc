@@ -9,6 +9,7 @@ syntax on
 set colorcolumn=80
 set hlsearch
 set splitright
+set scrolloff=5
 
 " Move to the next buffer
 nmap <leader>l :bnext<CR>
