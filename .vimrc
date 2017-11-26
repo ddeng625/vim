@@ -6,7 +6,7 @@ set number
 set ls=2
 "set ruler
 syntax on
-set colorcolumn=80
+set colorcolumn=121
 set hlsearch
 set splitright
 set scrolloff=5
@@ -50,10 +50,10 @@ map <right> :bnext<CR>
 set hidden
 
 " Disable Arrow keys in Insert mode
-imap <up> <Ctrl-y>
-imap <down> <Ctrl-e>
-imap <left> <nop>
-imap <right> <nop>
+" imap <up> <Ctrl-y>
+" imap <down> <Ctrl-e>
+" imap <left> <nop>
+" imap <right> <nop>
 
 " Disable EX mode
 nnoremap Q <nop>
@@ -72,6 +72,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ervandew/supertab'
 "Plug 'vim-airline/vim-airline'
 Plug 'bling/vim-bufferline'
+Plug 'rust-lang/rust.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'bfrg/vim-cpp-modern'
 call plug#end()
 
 " Enable the list of buffers
