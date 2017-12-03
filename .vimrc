@@ -75,7 +75,11 @@ Plug 'bling/vim-bufferline'
 Plug 'rust-lang/rust.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'bfrg/vim-cpp-modern'
+Plug 'inkarkat/vim-SyntaxRange'
 call plug#end()
+
+au VimEnter * call SyntaxRange#Include("'''js", "'''end", 'javascript', 'NonText')
+au VimEnter * call SyntaxRange#Include("'''html", "'''end", 'html', 'NonText')
 
 " Enable the list of buffers
 "let g:airline#extensions#tabline#enabled = 1
